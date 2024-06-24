@@ -13,8 +13,21 @@ app.get('/', (req, res) => {
     res.send(`Hello, world!`)
 })
 
-// variables resource
-const locationsController = 
+// location, machine, person, plans, special-event resources
+const locationsController = require('./controllers/locationsController')
+app.use('/locations', locationsController)
+
+const machinesController = require('./controllers/machinesController')
+app.use('/machines', machinesController)
+
+const personsController = require('./controllers/personsController')
+app.use('/machines', personsController)
+
+const plansController = require('./controllers/plansController')
+app.use('/plans', plansController)
+
+const specialEventsController = require('./controllers/specialEventsController')
+app.use('/special-events', specialEventsController)
 
 // not found 404
 
