@@ -1,6 +1,6 @@
 const express = require('express')
 const specialEvents = express.Router()
-const specialEventsArray = require('../models/personModels')
+const specialEventsArray = require('../models/person.model')
 
 
 specialEvents.get('/', (req, res) => {

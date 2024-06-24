@@ -1,6 +1,6 @@
 const express = require('express')
 const plans = express.Router()
-const plansArray = require('../models/personModels')
+const plansArray = require('../models/person.model')
 
 
 plans.get('/', (req, res) => {

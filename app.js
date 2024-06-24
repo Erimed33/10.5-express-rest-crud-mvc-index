@@ -1,11 +1,11 @@
 const express = require('express')
 const app = express()
 
-const locationsController = require('./models/locationModels')
-const machinesController = require('./models/machineModels')
-const personsController = require('./models/personModels')
-const plansController = require('./models/planModel')
-const specialEventsController = require('./models/specialEventsModel')
+const locations = require('./models/location.model')
+const machines = require('./models/machine.model')
+const persons = require('./models/person.model')
+const plans = require('./models/plan.model')
+const specialEvents = require('./models/special-event.model')
 
 // Routes
 // home
@@ -14,19 +14,19 @@ app.get('/', (req, res) => {
 })
 
 // location, machine, person, plans, special-event resources
-const locationsController = require('./controllers/locationsController')
+const locationsController = require('./controllers/locations.controller')
 app.use('/locations', locationsController)
 
-const machinesController = require('./controllers/machinesController')
+const machinesController = require('./controllers/machines.controller')
 app.use('/machines', machinesController)
 
-const personsController = require('./controllers/personsController')
+const personsController = require('./controllers/persons.controller')
 app.use('/persons', personsController)
 
-const plansController = require('./controllers/plansController')
+const plansController = require('./controllers/plans.controller')
 app.use('/plans', plansController)
 
-const specialEventsController = require('./controllers/specialEventsController')
+const specialEventsController = require('./controllers/special-events.controller')
 app.use('/specialEvents', specialEventsController)
 
 // not found 404
