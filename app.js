@@ -1,11 +1,11 @@
 const express = require('express')
 const app = express()
 
-const locationModels = require('./models/locationModels')
-const machineModels = require('./models/machineModels')
-const personModels = require('./models/personModels')
-const planModels = require('./models/planModel')
-const specialEventsModel= require('./models/specialEventsModel')
+const locationsController = require('./models/locationModels')
+const machinesController = require('./models/machineModels')
+const personsController = require('./models/personModels')
+const plansController = require('./models/planModel')
+const specialEventsController = require('./models/specialEventsModel')
 
 // Routes
 // home
@@ -21,13 +21,13 @@ const machinesController = require('./controllers/machinesController')
 app.use('/machines', machinesController)
 
 const personsController = require('./controllers/personsController')
-app.use('/machines', personsController)
+app.use('/persons', personsController)
 
 const plansController = require('./controllers/plansController')
 app.use('/plans', plansController)
 
 const specialEventsController = require('./controllers/specialEventsController')
-app.use('/special-events', specialEventsController)
+app.use('/specialEvents', specialEventsController)
 
 // not found 404
 
